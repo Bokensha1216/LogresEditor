@@ -8,10 +8,10 @@ use windows::Win32::UI::WindowsAndMessaging::*;
 use windows::Win32::System::Memory::*;
 use windows::Win32::System::ProcessStatus::*;
 
-mod utils;
+extern crate utils;
 use utils::*;
 
-pub fn write_process_memory(process_handle: HANDLE, address: usize, data_to_write: &[u8]) {
+pub fn write_process_memory(process_handle: HANDLE, address: usize, data_to_write: Vec<u8>) {
         unsafe {
                 change_protect_to_readwrite(process_handle, address);
 

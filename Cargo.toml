@@ -18,3 +18,8 @@ features = [
         "Win32_System_LibraryLoader",
         "Win32_System_ProcessStatus"
 ]
+
+[lib]
+name = "utils"
+path = "src/utils.rs"
+
